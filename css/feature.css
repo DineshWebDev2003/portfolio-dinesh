@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.education{
+    background-color: bisque;
+}
+
+.education:hover{
+    padding: 10px;
+    margin-bottom: 0.5rem solid red ;
+}
