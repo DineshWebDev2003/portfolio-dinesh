@@ -349,7 +349,7 @@ a:hover{
 
 .contact-card {
     display: flex;
-     /* Adjusted to column for proper stacking */
+     width: 300px; /* Adjusted to column for proper stacking */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden; /* Ensures the border-radius is applied correctly */
