@@ -114,112 +114,69 @@ p{
     margin-bottom: 1.2rem;
 }
 /*============================navbar================================*/
-body{
-    font-family: var(--ff-primary);
-    font-size: 0.8rem;
-}
-.nav-btn svg{
-    fill:red;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    cursor: pointer;
-    z-index: 1;
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-    position: fixed;
-   background-image: linear-gradient(to left ,rgb(247, 177, 49),rgb(231, 192, 192),rgb(233, 233, 88));
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateX(-100%);
-    transition: var(--transition);
-    z-index: 3;
-}
-
-.nav-t{
-    background: white;
-}
-
-.navbar h3{
-    padding: 1rem;
-    color: rgb(8, 8, 8);
-   font-size: 1.5rem; 
-   text-align: center;
+/* Basic styling for the header and navbar */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
    
-   font-weight: 700;
-   color: transparent;
-   background-image: linear-gradient(to left ,orange,red,yellow);
-   background-clip: text;
-   margin-bottom: -1rem;
 }
 
-.navbar svg{
-    width: 100px;
+.navbar {
+    max-width: 1200px;
     margin: 0 auto;
-    
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
 }
 
-.svg-img{
-    position: relative;
-    left: 50%;
-    right: 50;
-    cursor: pointer;
-}
-.navbar header{
-    position: relative;
-}
-.close{
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
-
-.close svg{
-cursor: pointer;
-transition: var(--transition);
-}
-
-.close:hover svg{
-    fill: rgb(243, 0, 0);
-
-}
-
-.nav-items{
-    list-style-type: none;
-}
-
-.nav-link{
-    display: block;
-    color: #fc0505;
-    text-transform: uppercase;
+.logo a {
+    color: #fff;
     font-size: 1.2rem;
-    padding: 0.75rem 1rem;
-    letter-spacing: 0.5px;
-    transition: var(--transition);
-    font-family: var(--ff-brand);
-    text-align: center;
+    text-decoration: none;
 }
 
-.nav-link:hover{
-    background-image: linear-gradient(to left ,orange,red,yellow);
-margin: 
-  1.5rem;
-    border-left: 0.5rem solid rgb(252, 2, 2);
-    border-right: 0.5rem solid rgb(252, 2, 2);
-    color: white;
+.nav-toggle {
+    display: none; /* Hide checkbox */
 }
 
-#nav-check{
-    display: none;
+.nav-toggle-label {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; /* Hide label by default */
 }
-#nav-check:checked~.navbar{
-    transform: translateX(0);
-    z-index: 1;
 
+.nav-links {
+    list-style-type: none;
+    display: flex;
 }
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f8f8f8;
+}
+
+/* Media query for tablet and smaller screens */
+
 
 /*=====================banner================*/
 .header{
@@ -282,38 +239,50 @@ outline-offset: 0.25rem;
 
 
 /*============================features=========================*/
-.features{
-    background-color: #e2d5d5;
-    cursor: pointer;
+.card {
+    border: 1px solid #ccc;
+   background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 20px;
+    margin: 20px auto;
 }
-.feature{
-    padding: 2.5rem 0;
-    text-align: center;
-    transition: var(--transition);
-}
-.feature-img {
-    transition: var(--transition);
 
+.icon {
+    margin-bottom:5px; 
 }
 
-.features-title{
+.content {
+    margin-top: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+}
+.txt-trans{
     text-transform: uppercase;
-    padding-top: 20px;
-}
-.features-text{
-    color: #7b797e;
-    max-width: 17rem;
-    margin: 0 auto;
-    padding-bottom: 20px ;
-    
 }
 
-.feature:hover{
-    background-color: white;
-    box-shadow: 0 2px red;
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+.uniq{
     padding: 20px;
 }
-
 /*=========================================about==================================*/
 
 .about-img,.about-info{
@@ -340,4 +309,74 @@ outline-offset: 0.25rem;
 .about-text{
     max-width: 26rem;
     color: #6110da;
+}
+
+
+/*===================contact card===========================*/
+
+.contact-card {
+    display: flex;
+    flex-direction: column; /* Adjusted to column for proper stacking */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the border-radius is applied correctly */
+    width: 300px; /* Adjust width according to your design */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+
+}
+
+.contact-info {
+    padding: 20px;
+    flex-grow: 1; /* Allows the contact info section to expand */
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.contact-avatar {
+    flex-shrink: 0; /* Prevents the avatar from shrinking */
+    text-align: center; /* Center align avatar */
+    padding: 20px 0; /* Padding top and bottom */
+}
+
+.contact-avatar img {
+    width: 100px; /* Adjust avatar size */
+    height: 100px;
+    border-radius: 50%;
+}
+
+.contact-footer {
+    background-color: #f0f0f0; /* Light background color for footer */
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc; /* Top border for separation */
+    border-radius: 0 0 8px 8px; /* Rounded corners for bottom */
+}
+
+.contact-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 12px;
+}
+
+.uniq{
+    border: 1px solid #ccc;
+   background-color: rgba(0, 0, 0,0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+   
+    flex-direction: column;
+   
+    padding: 20px;
+    margin: 10px;
+
 }
