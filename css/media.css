@@ -1,15 +1,6 @@
 
    
 
-    .card{
-        border: 1px solid #ccc;
-       background-color: white;
-        border-radius: 8px;
-        overflow: hidden; 
-       
-        flex-direction:column;
-    justify-content: space-between;
-    }
 
 
 

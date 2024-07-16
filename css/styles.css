@@ -126,7 +126,6 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-   
 }
 
 .navbar {
@@ -136,7 +135,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .logo a {
@@ -176,6 +174,41 @@ header {
 }
 
 /* Media query for tablet and smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        background-color: #333;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when checkbox is checked */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-toggle-label {
+        display: block; /* Show hamburger menu icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+}
 
 
 /*=====================banner================*/
@@ -316,11 +349,12 @@ a:hover{
 
 .contact-card {
     display: flex;
-    flex-direction: column; /* Adjusted to column for proper stacking */
+     /* Adjusted to column for proper stacking */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden; /* Ensures the border-radius is applied correctly */
-    width: 300px; /* Adjust width according to your design */
+    width: 400px;
+    height: 200px; /* Adjust width according to your design */
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
@@ -329,7 +363,7 @@ a:hover{
 
 .contact-info {
     padding: 20px;
-    flex-grow: 1; /* Allows the contact info section to expand */
+   /* Allows the contact info section to expand */
 }
 
 .contact-info h2 {
@@ -351,7 +385,8 @@ a:hover{
 .contact-avatar img {
     width: 100px; /* Adjust avatar size */
     height: 100px;
-    border-radius: 50%;
+    border-radius: 5%;
+    align-items: center;
 }
 
 .contact-footer {
@@ -380,3 +415,16 @@ a:hover{
     margin: 10px;
 
 }
+
+
+
+
+    .card{
+        border: 1px solid #ccc;
+       background-color: white;
+        border-radius: 8px;
+        overflow: hidden; 
+       
+        flex-direction:column;
+    justify-content: space-between;
+    }
