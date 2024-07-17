@@ -347,20 +347,6 @@ a:hover{
 
 /*===================contact card===========================*/
 
-.contact-card {
-    display: flex;
-     width: 300px; /* Adjusted to column for proper stacking */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden; /* Ensures the border-radius is applied correctly */
-    width: 400px;
-    height: 200px; /* Adjust width according to your design */
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
-
-}
-
 .contact-info {
     padding: 20px;
    /* Allows the contact info section to expand */
