@@ -89,21 +89,28 @@ header {
     .nav-links {
         display: none;
         position: fixed;
-        top: 60px;
-       
-        right: 0;
-        background: #000;
-        width: 100%;
+        top: 80px;
+        left: 30%;
+        background:black;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 40%;
+        height: 40%;
         text-align: center;
         flex-direction: column;
-        padding-top: 10px;
+        padding-top: 0px;
         z-index: 999; 
         text-transform: capitalize;
-        padding: 20px;
+        
+        
     }
     
     .nav-links.active {
         display: flex;
+       
     }
     
     .hamburger {
@@ -111,11 +118,20 @@ header {
     }
 
     .close-icon {
-        display: block;
+       display: none;
         position: absolute;
         top: 10px;
         right: 20px;
     }
+
+    .close-icon.active{
+        display:flex ;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    
 
     .close-icon span {
         font-size: 30px;
@@ -141,6 +157,7 @@ header {
 
 .profile-photo {
     width: 200px;
+    
     height: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
