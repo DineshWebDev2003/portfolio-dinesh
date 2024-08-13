@@ -1,242 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dinesh-portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="icon" href="images/naruto.jpg"type="image/png">
-    <link rel="stylesheet" href="html/feature.html">
-</head>
-<body>
-
-    <!--navbar-->
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <!--Nav bar -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                
-            </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Main content of the portfolio -->
-    
-    <script>
-        // JavaScript to toggle nav-links visibility
-        const navToggle = document.getElementById('nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
+      <nav class="navbar">
+        <div class="container">
+          <h1 class="logo">MyPortfolio</h1>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="close-icon" id="close-icon">
+            <span>&times;</span>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="container">
+          <img src="author.png" alt="Profile Photo" class="profile-photo" />
+          <h1>Hi, I'm Dinesh</h1>
+          <p>I'm a <span id="element"></span>. Welcome to my portfolio!</p>
+          <a href="#projects" class="btn">See My Work</a>
 
-        navToggle.addEventListener('change', function() {
-            if (this.checked) {
-                navLinks.classList.add('active');
-            } else {
-                navLinks.classList.remove('active');
-            }
-        });
+          <a href="Dinesh.M-Resume.pdf" download="Dinesh-resume-2024" class="btn">Resume</a>
+        </div>
+      </div>
+    </header>
+
+    <!--About section-->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          "Hello! I'm Dinesh, a highly motivated and detail-oriented recent
+          graduate in Computer Science and Engineering (CSE), with a strong
+          passion for web development. With a solid foundation in [list specific
+          skills, e.g. HTML, CSS, JavaScript, React, etc.], I'm now seeking a
+          challenging role that utilizes my skills and experience to drive
+          success. Please explore my portfolio to see my projects and
+          achievements. If you're interested in learning more about my
+          qualifications, you can download my resume. I look forward to the
+          opportunity to contribute to your team and discuss how my skills align
+          with your needs. Let's connect!"
+        </p>
+      </div>
+    </section>
+
+    <!--project section-->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <img src="bmi cal.PNG" alt="Project 1" />
+            <div class="overlay">
+              <p>Bmi calculator using React js</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="port1.PNG" alt="Project 2" />
+            <div class="overlay">
+              <p>
+                Portfolio website using <br />
+                html,css,js deployed netlify
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Key Skills</h2>
+        <ul class="skills-list">
+          <li style="background-color: orange;">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"
+                /></svg></span
+            >HTML
+          </li>
+          <li style="background-color: #264de4">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M420-360q-17 0-28.5-11.5T380-400v-40h60v20h80v-40H420q-17 0-28.5-11.5T380-500v-60q0-17 11.5-28.5T420-600h120q17 0 28.5 11.5T580-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T580-460v60q0 17-11.5 28.5T540-360H420Zm260 0q-17 0-28.5-11.5T640-400v-40h60v20h80v-40H680q-17 0-28.5-11.5T640-500v-60q0-17 11.5-28.5T680-600h120q17 0 28.5 11.5T840-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T840-460v60q0 17-11.5 28.5T800-360H680Zm-520 0q-17 0-28.5-11.5T120-400v-160q0-17 11.5-28.5T160-600h120q17 0 28.5 11.5T320-560v40h-60v-20h-80v120h80v-20h60v40q0 17-11.5 28.5T280-360H160Z"
+                /></svg
+            ></span>
+            CSS
+          </li>
+          <li style="background-color: yellow">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z"
+                /></svg></span
+            >JavaScript
+          </li>
+          <li style="background-color: #83aee6">React</li>
+          <li style="background-color: #68a063">Node.js</li>
+          <li style="background-color: #68a063">MONGO DB</li>
+
+          <!-- Add more skills as needed -->
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>certificates</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <img
+              src="https://udemy-certificate.s3.amazonaws.com/image/UC-d951635b-4796-4d42-b034-8a59575f45fb.jpg?v=1722857294000"
+              alt="Project 1"
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="project-item">
+            <img src="c2.PNG" alt="Project 2" />
+            <div class="overlay"></div>
+          </div>
+          <!-- Add more projects as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section id="internships">
+      <div class="container">
+        <h2>Internships</h2>
+        <div class="internships-grid">
+          <div
+            class="internship-item"
+            style="background-color: rgb(0, 255, 34)"
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+            <p>
+              python programming for beginners <br />
+              in intelisense Academy <br />
+              (2023)
+            </p>
+          </div>
+          <div
+            style="background-color: rgb(0, 255, 34)"
+            class="internship-item"
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+            <p>web development esssentials in Durga tech (2024)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="education-grid">
+          <div style="background-color: pink" class="education-item">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M320-160q-33 0-56.5-23.5T240-240v-120h120v-90q-35-2-66.5-15.5T236-506v-44h-46L60-680q36-46 89-65t107-19q27 0 52.5 4t51.5 15v-55h480v520q0 50-35 85t-85 35H320Zm120-200h240v80q0 17 11.5 28.5T720-240q17 0 28.5-11.5T760-280v-440H440v24l240 240v56h-56L510-514l-8 8q-14 14-29.5 25T440-464v104ZM224-630h92v86q12 8 25 11t27 3q23 0 41.5-7t36.5-25l8-8-56-56q-29-29-65-43.5T256-684q-20 0-38 3t-36 9l42 42Zm376 350H320v40h286q-3-9-4.5-19t-1.5-21Zm-280 40v-40 40Z"
+                /></svg
+            ></span>
+            <p>Government higher secondary school <br />with 58%</p>
+          </div>
+
+          <div style="background-color: pink" class="education-item">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M320-160q-33 0-56.5-23.5T240-240v-120h120v-90q-35-2-66.5-15.5T236-506v-44h-46L60-680q36-46 89-65t107-19q27 0 52.5 4t51.5 15v-55h480v520q0 50-35 85t-85 35H320Zm120-200h240v80q0 17 11.5 28.5T720-240q17 0 28.5-11.5T760-280v-440H440v24l240 240v56h-56L510-514l-8 8q-14 14-29.5 25T440-464v104ZM224-630h92v86q12 8 25 11t27 3q23 0 41.5-7t36.5-25l8-8-56-56q-29-29-65-43.5T256-684q-20 0-38 3t-36 9l42 42Zm376 350H320v40h286q-3-9-4.5-19t-1.5-21Zm-280 40v-40 40Z"
+                /></svg
+            ></span>
+            <p>
+              Computer Science and Engineering in nandha college of
+              technology<br />with 58%
+            </p>
+          </div>
+          <!-- Add more education details as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+
+        <form class="contact_form" >
+          <label for="name">Name:</label>
+          <input class="name" type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input class="email" type="email" id="email" name="email" required />
+
+
+          <label for="message">Message:</label>
+          <textarea class="message" id="message" name="message" required></textarea>
+
+          <button type="submit" class="btn" onclick="sendMsg">Send Message</button>
+        </form>
+
+       
+
+
+
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/dinesh-mahi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            class="social-link"
+          >
+            <svg
+              fill="#000000"
+              height="24px"
+              width="24px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 310 310"
+              xml:space="preserve"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="XMLID_801_">
+                  <path
+                    id="XMLID_802_"
+                    d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z"
+                  ></path>
+                  <path
+                    id="XMLID_803_"
+                    d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"
+                  ></path>
+                  <path
+                    id="XMLID_804_"
+                    d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/DineshWebDev2003 "
+            target="_blank"
+            class="social-link"
+          >
+            <svg
+            fill="#000000"
+              width="24px"
+              height="24px"
+              viewBox="0 0 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>github [#142]</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-140.000000, -7559.000000)"
+                    fill="#000000"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                        id="github-[#142]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/dinesh.md_?igsh=MXU0ejNzYjIwd3FvZA=="
+            target="_blank"
+            class="social-link"
+          >
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  fill="#0F0F0F"
+                ></path>
+                <path
+                  d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                  fill="#0F0F0F"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                  fill="#0F0F0F"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <!-- Add more social links as needed -->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          thanks for visiting my portfolio
+          <span>
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill=""
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  opacity="0.5"
+                  d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  d="M9.44661 15.3975C9.11385 15.1508 8.64413 15.2206 8.39747 15.5534C8.15082 15.8862 8.22062 16.3559 8.55339 16.6025C9.5258 17.3233 10.715 17.75 12 17.75C13.285 17.75 14.4742 17.3233 15.4466 16.6025C15.7794 16.3559 15.8492 15.8862 15.6025 15.5534C15.3559 15.2206 14.8862 15.1508 14.5534 15.3975C13.825 15.9373 12.9459 16.25 12 16.25C11.0541 16.25 10.175 15.9373 9.44661 15.3975Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  d="M16 10.5C16 11.3284 15.5523 12 15 12C14.4477 12 14 11.3284 14 10.5C14 9.67157 14.4477 9 15 9C15.5523 9 16 9.67157 16 10.5Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  d="M10 10.5C10 11.3284 9.55228 12 9 12C8.44772 12 8 11.3284 8 10.5C8 9.67157 8.44772 9 9 9C9.55228 9 10 9.67157 10 10.5Z"
+                  fill="#ffffff"
+                ></path>
+              </g>
+            </svg>
+          </span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["front-end developer", "Fullstack developer","Mernstack developer"],
+        typeSpeed: 30,
+        loop: true,
+      });
+
     </script>
 
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+
+    <script>
+        const form = document.querySelector('.contact_form');
+
+
+    function sendMsg(e){
+        e.preventDefault();
+        
+      const  name=document.querySelector('.name'),
+       email=document.querySelector('.email'),
+       message=document.querySelector('.message');
     
-<!--Header-->
-
-    <header class="header" id="home">
-        <div class="banner">
-          <h2>welcome to my portfolio</h2>
-          <h1>i'm Dinesh</h1>
-          <a href="#showcase" class="btn">showcase</a>  
-        </div>
-    </header>
-
-
-    <div class="content-div"></div>
-   
-   <!--about section-->
-    <section class="about">
-        <div class="section-center" id="about">
-            <div class="about-img">
-                <div class="about-picture-container">
-                    <img src="images/about.PNG" alt="" class="about-picture">
-                </div>
-            </div>
-            <div class="about-info">
-                <div class="section-title">
-                    <h3>About Me</h3>
-                    <h2>Summary</h2>
-                </div>
-                <p class="Summary-text">
-                    "Hello! I'm Dinesh, a highly motivated and detail-oriented recent graduate in Computer Science and Engineering (CSE), with a strong passion for web development. With a solid foundation in [list specific skills, e.g. HTML, CSS, JavaScript, React, etc.], I'm now seeking a challenging role that utilizes my skills and experience to drive success. Please explore my portfolio to see my projects and achievements. If you're interested in learning more about my qualifications, you can download my resume. I look forward to the opportunity to contribute to your team and discuss how my skills align with your needs. Let's connect!"
-                </p>
-            
-           
-           <a href="/Dinesh-resume-2024-.pdf" class="btn" download="dinesh-portfolio">Downloade resume</a>
-           
-           
-           
-           
-            </div>
-        </div>
-            </section>
-   
-    <!--features-->
-    <section class="uniq" id="portfolio">
-    <div class="card"  id="showcase">
-        <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px" fill="black"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg>
-        </div>
-        <div class="content">
-            <h2 class="txt-trans">College</h2>
-            <p>nandha college of technology </p>
-            <p class="txt-trans">B.e-computer science and engineering with 7.5 cgpa </p>
-        </div>
-
-        <div class="content">
-            <h2 class="txt-trans">higher scondary school</h2>
-            <p>12 <sup>th</sup> std computer science with 57%</p>
-        </div>
-    </div>
     
-    <div class="card">
-        <div class="icon">
-            <svg height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 54.941 54.941" xml:space="preserve">
-<g>
-	<g>
-		<path style="fill:#010002;" d="M24.003,35.064v-2.027H13.408v4.449c0,0.217,0.014,0.385,0.039,0.52
-			c-0.193,4.438-0.206,9.883-0.206,14.205c0,1.508,1.225,2.73,2.733,2.73s2.731-1.225,2.731-2.73c0-4.229,0.011-11.809,0.194-16.098
-			c0.991,5.314,2.461,13.238,4.383,17.203c0.472,0.975,1.446,1.543,2.461,1.543c0.399,0,0.805-0.09,1.19-0.273
-			c1.357-0.658,1.923-2.291,1.265-3.65C25.918,46.228,24.742,39.574,24.003,35.064z"/>
-		<path style="fill:#010002;" d="M17.527,11.019c0.185,0.803,0.045,1.629-0.393,2.327c-0.428,0.681-1.091,1.157-1.87,1.349
-			c0.674,0.443,1.479,0.703,2.346,0.703c0.878,0,1.692-0.265,2.371-0.718h-2.006l1.059-1.733l-1.009-1.829h3.864
-			c0-2.363-1.916-4.279-4.279-4.279c-1.445,0-2.72,0.719-3.494,1.814c0.135-0.017,0.271-0.029,0.405-0.029
-			C15.967,8.625,17.202,9.609,17.527,11.019z"/>
-		<path style="fill:#010002;" d="M48.315,12.829l-2.584-2.29v1.75h-3.789C40.245,1.977,34.126,0.086,33.825,0l-0.273,0.955
-			c0.068,0.019,5.715,1.766,7.377,11.334h-18.43l-0.372-0.681h-2.872l0.707,1.283l-0.707,1.158h2.871l0.307-0.681h18.662
-			c0.121,0.903,0.207,1.871,0.252,2.905c-0.355-0.199-0.764-0.322-1.199-0.322h-21.44c-0.208,0-0.407,0.033-0.601,0.081
-			c-1.828,0.207-3.372,1.349-4.152,2.935c-2.853-2.435-2.843-3.45-2.845-3.45c0.003-0.007,0.408-0.79,3.468-1.491
-			c1.208-0.277,1.962-1.48,1.685-2.688c-0.276-1.208-1.481-1.959-2.688-1.685c-1.487,0.341-6.013,1.38-6.828,4.823
-			c-0.774,3.272,2.313,6.273,4.703,8.246c0.417,0.345,0.923,0.513,1.427,0.513c0.18,0,0.357-0.027,0.533-0.069v8.677h10.595V21.294
-			c0-0.127-0.011-0.251-0.02-0.376h16.16c0.418,0,0.805-0.113,1.15-0.294c-0.872,12.346-7.718,15.276-7.79,15.305l0.369,0.924
-			c0.334-0.135,7.932-3.336,8.475-17.293c0.176-0.339,0.281-0.718,0.281-1.126c0-0.391-0.1-0.755-0.26-1.084
-			c-0.021-1.441-0.115-2.766-0.271-3.982h3.635v1.75L48.315,12.829z"/>
-	</g>
-</g>
-</svg>
-        </div>
-        <div class="content">
-            <h2 class="txt-trans">key-Skils</h2>
-            <h2 class="txt-trans">Front-end</h2>
-            <ol><li>html</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>Bootstrap</li>
-        <li>React(basic)</li></ol>
-        </div>
-        <div class="content">
-          
-            <h2 class="txt-trans">Back-end</h2>
-            <ol><li>Node.js(basic)</li>
-            <li>MongoDB</li>
-            <li>Deployment</li>
-           
-        </div>
-
-        <div class="content">
-          
-            <h2 class="txt-trans">Extra</h2>
-            <ol><li>Git&github</li>
-            <li>Canva</li>
-            <li>Editing</li>
-           
-        </div>
-
-       
-    </div>
-
     
-    <div class="card">
-        <div class="icon">
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <svg fill="#000000" height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                 viewBox="0 0 431.17 431.17" xml:space="preserve">
-            <g>
-                <path d="M68.831,99.602h255.814c7.878,0,14.265-6.387,14.265-14.265c0-7.878-6.387-14.265-14.265-14.265H68.831
-                    c-7.878,0-14.265,6.387-14.265,14.265C54.566,93.215,60.953,99.602,68.831,99.602z"/>
-                <path d="M68.831,160.465h255.814c7.878,0,14.265-6.387,14.265-14.265c0-7.878-6.387-14.265-14.265-14.265H68.831
-                    c-7.878,0-14.265,6.387-14.265,14.265C54.566,154.078,60.953,160.465,68.831,160.465z"/>
-                <path d="M204.549,192.799H68.831c-7.878,0-14.265,6.387-14.265,14.265c0,7.878,6.387,14.265,14.265,14.265h135.718
-                    c7.878,0,14.265-6.387,14.265-14.265C218.814,199.186,212.427,192.799,204.549,192.799z"/>
-                <path d="M430.373,409.679l-37.295-73.843l14.431-5.759c3.79-1.513,6.97-5.888,7.24-9.96l1.229-18.516
-                    c0.206-3.102,1.778-7.941,3.434-10.569l9.886-15.702c2.175-3.452,2.175-8.861,0.001-12.314l-9.887-15.702
-                    c-1.654-2.628-3.227-7.469-3.433-10.569l-1.228-18.516c-0.232-3.486-2.6-7.188-5.652-9.132V37.438
-                    c0-15.732-12.798-28.53-28.529-28.53H28.529C12.798,8.908,0,21.706,0,37.438v244.381c0,15.732,12.798,28.529,28.529,28.529h224.396
-                    l0.648,9.77c0.271,4.072,3.45,8.446,7.24,9.959l13.549,5.407l-37.474,74.195c-1.153,2.284-0.844,3.66-0.381,4.412
-                    c0.293,0.477,1.011,1.275,2.523,1.275c0.756,0,1.627-0.204,2.589-0.606l30.697-12.852c0.755-0.316,1.653-0.483,2.597-0.483
-                    c2.255,0,4.553,0.933,5.854,2.374l14.746,16.349c1.229,1.363,2.751,2.114,4.283,2.114c2.022,0,3.836-1.307,4.85-3.494l28.89-62.32
-                    c0.063-0.001,0.125-0.001,0.188-0.002l28.891,62.322c1.014,2.188,2.827,3.494,4.851,3.494c1.531,0,3.053-0.751,4.282-2.115
-                    l14.745-16.347c1.302-1.442,3.6-2.375,5.854-2.375c0.943,0,1.842,0.167,2.597,0.483l30.697,12.852
-                    c0.962,0.402,1.833,0.606,2.589,0.606c1.513,0,2.23-0.799,2.523-1.275C431.217,413.339,431.526,411.963,430.373,409.679z
-                     M28.529,37.438h352.039l0.002,156.56l-11.152-13.417c-2.036-2.449-5.764-4.094-9.275-4.094c-0.855,0-1.673,0.098-2.433,0.291
-                    l-17.998,4.581c-2.867,0.729-8.236,0.729-11.104,0l-17.996-4.581c-0.76-0.193-1.578-0.291-2.433-0.291
-                    c-3.512,0-7.239,1.645-9.275,4.094l-11.866,14.277c-1.984,2.389-6.099,5.379-8.983,6.53l-17.24,6.882
-                    c-3.791,1.513-6.971,5.887-7.241,9.959l-1.229,18.516c-0.205,3.102-1.777,7.941-3.433,10.569l-9.886,15.702
-                    c-2.175,3.452-2.175,8.862,0,12.314l4.085,6.488H28.529V37.438z M334.16,329.825c-33.497,0-60.652-27.154-60.652-60.652
-                    c0-33.498,27.155-60.652,60.652-60.652c33.498,0,60.654,27.154,60.654,60.652C394.815,302.671,367.658,329.825,334.16,329.825z"/>
-            </g>
-            </svg>        </div>
-        <div class="content">
-            <h2 class="txt-trans">Certificates</h2>
-          <ol>
-            <li>The fullstack Webdevelopment bootcamp 2024-MERN STACK in UDEMY app</li>
-            <br>
-            <li>Building Responsive Landing page Using HTML And CSS in Geekstar</li>
-          </ol>
-        </div>
-
-       
-    </div>
-
-
-    <div class="card">
-        <div class="icon">
-            <svg width="100px" height="100px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M42.79,12.72,21.55,41.78,3.79,28.79l4.87-6.66,11.1,8.12L36.13,7.85l3.3124,2.45.3419.2226L20.6168,36.0561,8.93,27.6263"/></svg>
-        </div>
-        <div class="content">
-            <h2 class="txt-trans">Mini-projects-Doned</h2>
-            <ol><li><a href="#">portfolio-landingpage</a></li>
-            <li><a href="#">Recipe-webApp</a></li>
-            <li><a href="#">Mini E-commerce</a></li>
-            <li><a href="#">Chating Web-app</a></li>
-            <li><a href="#">Mini-blog</a></li></ol>
-        </div>
-
-    </section>
-<!--contact-->
-<section class="uniq">
-<div class="card" id="contact">
-    <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>Name:</strong> dinesh</p>
-        <p><strong>Email:</strong> dineshwebdev2003@gmail.com</p>
-        <p><strong>Phone:</strong> 9361229641</p>
-    </div>
-    <div>
-    <div>
-        <img src="images/dinesh-img.jpg" alt="" width="100px" height="500px"  class="about-picture"  style="object-fit:cover;"></div>
-    </section>
-       
-    </div>
-</div>
-
-
+        Email.send({
+            SecureToken : "e1116548-5ee3-4647-80d8-e828813a06cb",
+            To : 'dineshmahi02@gmal.com',
+            From : "email.value",
+            Subject : "contact form",
+            Body : "hi there "
+        }).then(
+          message => alert('submitted successfully')
+        );  
+    }
     
-
-</body>
+    form.addEventListener('submit', sendMsg);
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
