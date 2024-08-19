@@ -13,6 +13,46 @@ body {
     margin: 0 auto;
 }
 
+.container1{
+    width: 90%;
+    margin: 0 auto;
+    text-align:justify;
+    border: 3px solid;
+    padding: 10px;
+
+}
+
+#skills{
+    width: 90%;
+    margin: 0 auto;
+    text-align:justify;
+    border: 3px solid;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+
+}
+
+#projects{
+    width: 90%;
+    margin: 0 auto;
+    text-align:justify;
+    border: 3px solid;
+    padding: 10px;
+    background-color: #7250E6;
+    color: white;
+}
+
+#certifications{
+    width: 90%;
+    margin: 0 auto;
+    text-align:justify;
+    border: 3px solid;
+    padding: 10px;
+    background-color: #7250E6;
+    color: white;
+}
 header {
     color: #fff;
     background: #7250E6;
