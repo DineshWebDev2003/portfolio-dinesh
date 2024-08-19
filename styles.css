@@ -69,10 +69,12 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.938);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    border-radius: 0px 0px 15px 15px;
 }
 
 .logo {
