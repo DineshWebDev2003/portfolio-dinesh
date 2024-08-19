@@ -7,6 +7,8 @@
     <title>Modern Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="email.js"></script>
+  
   </head>
   <body>
     <!--Nav bar -->
@@ -226,7 +228,9 @@
       <div class="container">
         <h2>Contact Me</h2>
 
-        <form class="contact_form" >
+        <form class="contact_form"  action="https://api.web3forms.com/submit"method="post">
+
+          <input type="hidden" name="access_key" value="74c9453c-08b5-4c60-9b9a-28cc9b832b95">
           <label for="name">Name:</label>
           <input class="name" type="text" id="name" name="name" required />
 
@@ -237,8 +241,8 @@
           <label for="message">Message:</label>
           <textarea class="message" id="message" name="message" required></textarea>
 
-          <button type="submit" class="btn" onclick="sendMsg">Send Message</button>
-        </form>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success">
+          <button type="submit">Submit Form</button>        </form>
 
        
 
@@ -430,36 +434,10 @@
     </script>
 
 
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+   
 
 
-    <script>
-        const form = document.querySelector('.contact_form');
-
-
-    function sendMsg(e){
-        e.preventDefault();
-        
-      const  name=document.querySelector('.name'),
-       email=document.querySelector('.email'),
-       message=document.querySelector('.message');
-    
-    
-    
-        Email.send({
-            SecureToken : "e1116548-5ee3-4647-80d8-e828813a06cb",
-            To : 'dineshmahi02@gmal.com',
-            From : "email.value",
-            Subject : "contact form",
-            Body : "hi there "
-        }).then(
-          message => alert('submitted successfully')
-        );  
-    }
-    
-    form.addEventListener('submit', sendMsg);
-    </script>
+   
     <script src="script.js"></script>
   </body>
 </html>
