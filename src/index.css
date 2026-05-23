@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDFBF7;
+  --color-cream-dark: #F5F0E8;
+  --color-parchment: #EDE5D8;
+  --color-moss: #5B7B5A;
+  --color-moss-light: #7A9E7B;
+  --color-moss-dark: #3D5A3C;
+  --color-terracotta: #C1694F;
+  --color-terracotta-light: #D4836A;
+  --color-terracotta-dark: #A0523A;
+  --color-sky: #7EB8D4;
+  --color-sky-light: #A8D4E8;
+  --color-charcoal: #2C2420;
+  --color-warm-brown: #5C4033;
+  --color-wood: #8B6F47;
+  --color-wood-light: #A0845C;
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(123, 158, 123, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(193, 105, 79, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(126, 184, 212, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 10%, rgba(237, 229, 216, 0.4) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: var(--color-moss-light);
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-moss-light);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-moss);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(2deg); }
+  66% { transform: translateY(-4px) rotate(-1deg); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(-10px) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(10px) translateY(-10px); opacity: 1; }
+  100% { transform: translateX(-10px) translateY(0); opacity: 0.6; }
+}
+
+@keyframes ink-stamp {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.92); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(91, 123, 90, 0.15); }
+  50% { box-shadow: 0 0 24px rgba(91, 123, 90, 0.30); }
+}
+
+/* Avatar glow */
+.avatar-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
